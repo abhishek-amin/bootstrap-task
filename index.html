@@ -1,54 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <title>Strict</title>
+    <style type="text/css">
+    	body, html {
+	        padding-top: 70px;
+	        height: 100%;
+	        margin: 0;
+        }
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        .col-center-block {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .img-responsive {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;    
+        }
+
+        .imagewrap{
+            position:relative;
+        }
+
+        .imagewrap:after{
+            content:""; 
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(0,128,255,0.5);
+            z-index: 1;
+            opacity: 0;
+            transition: all 500ms ease-in-out;
+        }
+
+
+        .imagewrap:hover:after{
+            opacity: 1;
+            transition: all 300ms ease-in-out;
+        }
+
+        .bg {
+
+            background-image: url("./images/road-to-forest.jpg");
+            margin-top: 25px;
+            height: 100%; 
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .bg:after{
+                content:""; 
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 1;
+        }
+
+        .contact-form {
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .contact-form h1 {
+            color: white;
+        }
+
+        .contact-form h5 {
+            color: #e2e2e2;;
+        }       
+
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+	</style>
 </head>
 
 <body>
-	<div class="container">
-		<div class="header clearfix">
-			<nav class="navbar navbar-default navbar-fixed-top">
-				<ul class="nav nav-pills">
-			  		<li role="presentation" class="active"><a href="#">About Us</a></li>
-			  		<li role="presentation"><a href="#">Services</a></li>
-			  		<li role="presentation"><a href="#">Blog</a></li>
-			  		<li role="presentation"><a href="#">Contact Us</a></li>
-				</ul>
-			</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Strict</a>
+            </div>
+            <!-- Collection of nav links and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Service Main 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Service Main 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Service Main 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Service Main 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="">
+                <h3 class="text-center ">Simple & pure design.</h3>
+                <p class="text-center">Designers everywhere gush with admirati on upon seeing a web design and exclaim "its beautiful, it's so clean!".
+                    There are acountless number of web design round-ups dedicat edto'clean' design and it is atermthr own
+                    around quite abitin the web design community. It can be easy to spot a good example of clean design</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center" style="background-color: 
+        #f6f9f9; margin-top: 40px; padding-top: 20px; padding-bottom: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div style="font-size:5em; color:whitesmoke">
+                        <i class="glyphicon glyphicon-phone " style="background:#48baff; padding: 10px"></i>
+
+                    </div>
+                    <h3>Optimized for all devices</h3>
+                    <p>STRICT has been designed to be fully responsive on all devices</p>
+                </div>
+                <div class="col-sm-4">
+                    <div style="font-size:5em; color:whitesmoke">
+                        <i class="glyphicon glyphicon-send" style="background:#48baff; padding: 10px"></i>
+
+                    </div>
+                    <h3>Clean & Minimal Design</h3>
+                    <p>This multi purpose theme is especially created to be used for different projects.</p>
+                </div>
+                <div class="col-sm-4">
+                    <div style="font-size:5em; color:whitesmoke">
+                        <i class="glyphicon glyphicon-bullhorn" style="background:#48baff; padding: 10px"></i>
+                    </div>
+                    <h3>Font Awsome Icon</h3>
+                    <p>This multi purpose theme is especially created to be used for different projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="container-fluid bg-3 text-center">
+		<div class="container">
+			<h2 class="margin">Show case your work like a pro. </h2>
+            <p>Contact me if you like my work</p>
+            <br>
+			<div class="row">
+				<div class="col-sm-4">
+                    <div class="imagewrap">
+					    <img src="./images/nature_01.jpg" class="img-responsive margin" alt="Image">
+                    </div>
+                </div>
+				<div class="col-sm-4">
+                        <div class="imagewrap">
+                            <img src="./images/nature_01.jpg" class="img-responsive margin" alt="Image">
+                        </div>
+                </div>
+				<div class="col-sm-4">
+                        <div class="imagewrap">
+                            <img src="./images/nature_01.jpg" class="img-responsive margin" alt="Image">
+                        </div>
+                </div>
+			</div>
+
+			<div class="row" style="margin-top: 25px;">
+                    <div class="col-sm-4">
+                        <div class="imagewrap">
+                            <img src="./images/nature_01.jpg" class="img-responsive margin" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="imagewrap">
+                            <img src="./images/nature_01.jpg" class="img-responsive margin" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="imagewrap">
+                            <img src="./images/nature_01.jpg" class="img-responsive margin" alt="Image">
+                        </div>
+                    </div>
+			</div>
 		</div>
 	</div>
 
-	<div class="text1">some text here</div>
+	<div class="bg" style="padding-top: 25px;">
+		<div class="contact-form">
+			<div>
+				<h1 class="text-center">Stay with us.</h1>
+				<h5 class="text-center">We ensure quality and support.</h5>
+			</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-4">.col-md-4</div>
-			<div class="col-md-4">.col-md-4</div>
-			<div class="col-md-4">.col-md-4</div>
+			<div class="row">
+				<form class="col-md-6 col-md-offset-3">
+					<div class="form-group">
+						<input type="text" class="form-control" id="formGroupExampleInput"
+							placeholder="Full Name">
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control" id="formGroupExampleInput2"
+							placeholder="Email">
+					</div>
+
+					<div class="form-group">
+					<textarea class="form-control" rows="5" placeholder="Messages"></textarea>
+					</div>
+
+					<div class="form-group">
+						<div class="checkbox">
+							<label><input type="checkbox">Remember Me</label>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
-	</div>
+    </div>
+    
+    <footer class="page-footer font-small mdb-color pt-4 mt-4">
+        <div class="container text-center text-md-left">
+            <hr>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-8 col-lg-8">
+                    <p class="text-center text-md-left">© Copyright 2014:STRICT</strong></a></p>
+                </div>
 
-	<div class="text2"></div>
-
-	<div class="row-444-top"></div>
-	<div class="row-444-bottom"></div>
-
-	<div class="background-img">
-		<div class="text3"></div>
-		<form></form>
-	</div>
-
-	<div class="footer"></div>
-
+                <div class="col-md-4 col-lg-4 ml-lg-0">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="list-inline-item"><a class="btn-floating btn-sm rgba-white-slight mx-1"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
 </body>
 </html>
